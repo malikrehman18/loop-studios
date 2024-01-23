@@ -1,10 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  h3 {
+    @apply absolute w-52 bottom-4 px-6 duration-200 group-hover:scale-110 group-hover:text-black md:px-6 md:bottom-8;
+  }
+}
+@layer components {
+  .btn {
+    @apply px-10 py-2 font-alata font-bold uppercase tracking-widest border-2 border-black duration-500 hover:bg-black hover:text-white;
+  }
+}
 #hero {
   background-image: url(/images/desktop/image-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+.item-container {
+  @apply flex flex-col justify-between w-full space-y-6 text-2xl text-white uppercase md:flex-row md:space-y-0 md:space-x-8;
+}
+.item {
+  @apply relative overflow-hidden md:w-1/4;
+}
+.item-gradient {
+  @apply absolute top-0 right-0 left-0 bottom-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-60;
 }
 @media (max-width: 576px) {
   #hero {
